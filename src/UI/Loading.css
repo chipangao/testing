@@ -1,0 +1,52 @@
+._overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(187, 187, 187, 0.267);
+  }
+
+  .loading_logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    width: 15vmin;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .loading_logo {
+      animation: loading-logo-spin infinite 10s linear;
+    }
+  }
+
+  @keyframes loading-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loading_text{
+    text-align: center;
+    font-weight:bolder;
+  }
+
+  .dot2{
+    animation: fadeIn infinite 1.3s linear;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    } 
+    .dot3{
+      animation: fadeIn infinite 1.3s linear;
+      }
+      @keyframes fadeIn {
+      0% {opacity: 0;}
+      50% {opacity: 0.5;}
+      100% {opacity: 1;}
+      } 

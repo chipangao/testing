@@ -1,20 +1,20 @@
-.App {
+.Login {
   text-align: center;
 }
 
-.App-logo {
+.Login-logo {
   height: 25vmin;
   pointer-events: none;
   margin-top:0px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .Login-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.Login-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -25,7 +25,7 @@
   color: white;
 }
 
-.App-link {
+.Login-link {
   color: #61dafb;
 }
 
@@ -37,10 +37,10 @@
     transform: rotate(360deg);
   }
 }
-.App-form{
+.Login-form{
   margin-top: 30px;
 }
-.App-form input{
+.Login-form input{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -54,7 +54,7 @@ input:focus{
   animation-duration: 1s;
   animation-iteration-count: infinite;*/
 }
-.App-button{
+.Login-button{
   background-color: rgba(255, 255, 255, 0); 
   color: white; 
   text-align: center;
@@ -67,13 +67,13 @@ input:focus{
   display: inline-block;
   box-sizing: border-box;
 }
-.App-button:hover {
+.Login-button:hover {
   background-color: #61dafb;
   color: white;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  background-image: url('./icon/warning.png');
+  background-image: url('../icon/warning.png');
   background-size:contain;
   background-repeat: no-repeat;
   background-position:right;
@@ -97,20 +97,3 @@ input:focus{
   to {border: 8px solid #ffffff}
 }
 
-button{
-  background-color: #282c34;
-  color: white;
-  text-align: center;
-  font-size: 8vmin;
-  border: 1px solid #61dafb;
-  border-radius:8px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  display: inline-block;
-  box-sizing: border-box;
-}
-button:hover {
-  background-color: #61dafb;
-  color: white;
-}

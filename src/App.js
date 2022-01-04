@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import { Suspense, lazy } from 'react';
+import { useState } from 'react';
+import Loading from './UI/Loading'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const HomePage = lazy(() => import('./page/HomePage'));
+const LoginPage = lazy(() => import('./page/LoginPage'));
+
+function App(props) {
+
+  const [auth, setauth] = useState(true)
+
+  const Home = () => {
+    return (
+      <Suspense fallback={Loading()}>
+        <HomePage />
+      </Suspense>
+    )
+  }
+
+  const Login = () => {
+    return (
+      <Suspense fallback={Loading()}>
+        <LoginPage />
+      </Suspense>
+    )
+  }
+
+  return auth ? <Home /> : <Login />
+
 }
 
 export default App;
