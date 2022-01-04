@@ -17,7 +17,7 @@
     "staging": "cross-env REACT_APP_ENVIRONMENT='staging' PORT=3000 react-scripts start",
     "pro": "cross-env REACT_APP_ENVIRONMENT='production' PORT=3000 react-scripts start",
     "start": "cross-env REACT_APP_ENVIRONMENT='development' PORT=3000 react-scripts start",
-    "build": "react-scripts build",
+    "build": "powershell del docs -Force -Recurse && cross-env BUILD_PATH='./docs' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

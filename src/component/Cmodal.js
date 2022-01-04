@@ -45,6 +45,7 @@ function Cmodal(props) {
     return (
         <div>
             <button onClick={(e) => open(e)}>Modal click</button>
+            123
             <ModalUI
                 visible={visible}
                 open={() => open()}
